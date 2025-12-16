@@ -13,11 +13,15 @@ public class Main {
             int z = switch (op) {
                 case "+"-> x + y;
                 case "-" -> x - y;
+                case "*" -> x * y;
+                case "/" -> x / y;
                 default -> throw new InputMismatchException();
             };
             System.out.println(x + op + y + "=" + z);
         } catch (InputMismatchException e) {
             System.out.println("Error: valor no valido!");
+        } catch (ArithmeticException e) {
+            System.out.println("Error: division por 0!");
         }
     }
 }
