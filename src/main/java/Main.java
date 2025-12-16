@@ -8,13 +8,13 @@ public class Main {
             int x = sc.nextInt();
             System.out.println("Segundo numero?");
             int y = sc.nextInt();
-            System.out.println("Operacion? (+/-)");
+            System.out.println("Operacion? (+/-/*/:)");
             String op = sc.next();
             int z = switch (op) {
                 case "+"-> x + y;
                 case "-" -> x - y;
                 case "*" -> x * y;
-                case "/" -> x / y;
+                case ":" -> x / y;
                 default -> throw new InputMismatchException();
             };
             System.out.println(x + op + y + "=" + z);
